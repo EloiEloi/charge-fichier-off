@@ -17,7 +17,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "categories")
+@Table(name = "marques")
 public class Marque {
 
 	/** id : Long */
@@ -44,7 +44,8 @@ public class Marque {
 	/**
 	 * Constructor
 	 * 
-	 * @param nom nom de la marque
+	 * @param nom
+	 *            nom de la marque
 	 */
 	public Marque(String nom) {
 		this.nom = nom;
@@ -62,7 +63,8 @@ public class Marque {
 	/**
 	 * Setter
 	 * 
-	 * @param nom the nom to set
+	 * @param nom
+	 *            the nom to set
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
@@ -80,7 +82,8 @@ public class Marque {
 	/**
 	 * Setter
 	 * 
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(Long id) {
 		this.id = id;
@@ -98,7 +101,8 @@ public class Marque {
 	/**
 	 * Setter
 	 * 
-	 * @param produits the produits to set
+	 * @param produits
+	 *            the produits to set
 	 */
 	public void setProduits(List<Produit> produits) {
 		this.produits = produits;
