@@ -76,7 +76,8 @@ public class AppConfiguration {
 	}
 
 	/**
-	 * Cette configuration nécessite une source de données configurée. Elle s'utilise donc en association avec un autre fichier de configuration définissant un bean DataSource.
+	 * Cette configuration nécessite une source de données configurée. Elle s'utilise donc en association avec un autre fichier de configuration
+	 * définissant un bean DataSource.
 	 */
 	@Bean
 	public EntityManagerFactory entityManagerFactory(DataSource dataSource) {
@@ -93,6 +94,7 @@ public class AppConfiguration {
 		factory.setDataSource(dataSource);
 
 		Properties jpaProperties = new Properties();
+		jpaProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
 		if (generateDdl) {
 			jpaProperties.setProperty(JAVAX_PERSISTENCE_SCHEMA_GENERATION_DATABASE_ACTION, DROP_AND_CREATE);
 		}

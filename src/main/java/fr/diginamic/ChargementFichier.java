@@ -30,12 +30,13 @@ public class ChargementFichier implements CommandLineRunner {
 	private ProduitService produitService;
 
 	/** fileUrl : String */
-	private String fileUrl = "C:/Temp/Work/openData.xml";
+	private String fileUrl = "D:/diginamic/openData.xml";
 
 	/**
 	 * Point d'entrée principal
 	 * 
-	 * @param args arguments
+	 * @param args
+	 *            arguments
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(ChargementFichier.class, args);
